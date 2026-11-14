@@ -33,3 +33,10 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# Local tooling and agent metadata
+.tooling/
+.freebuff/
+
+# Local verification artifacts
+test/

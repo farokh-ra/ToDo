@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ToDo</string>
+
+    <string name="new_reminder">New reminder</string>
+    <string name="edit_reminder">Edit reminder</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="delete_reminder">Delete reminder?</string>
+    <string name="delete_reminder_body">This reminder and all of its dates will be removed. This cannot be undone.</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="title_hint">What do you need to do?</string>
+    <string name="title_required">Enter a title</string>
+    <string name="when">When</string>
+    <string name="when_hint">Dates use the Shamsi (Jalali) calendar and start on today. Add as many dates and times as you need; each one is a separate reminder.</string>
+    <string name="add_date_time">Add date &amp; time</string>
+    <string name="no_dates_yet">No dates yet. Tap “Add date &amp; time”.</string>
+
+    <string name="reliability">Reliability</string>
+    <string name="reliability_subtitle">ToDo runs on Android alarms, not a background service, so it costs no battery.</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_on">Allowed</string>
+    <string name="notifications_off">Blocked</string>
+    <string name="notifications_desc">Needed so a reminder can actually appear.</string>
+    <string name="exact_title">Exact alarms</string>
+    <string name="exact_on">Allowed</string>
+    <string name="exact_off">Not allowed</string>
+    <string name="exact_desc">Lets reminders fire at the exact minute, even in deep sleep.</string>
+    <string name="battery_title">Battery optimization</string>
+    <string name="battery_on">Unrestricted</string>
+    <string name="battery_off">Optimized</string>
+    <string name="battery_desc">Unrestricted keeps Samsung from delaying or dropping alarms.</string>
+    <string name="open_settings">Open settings</string>
+    <string name="allow">Allow</string>
+    <string name="disable">Disable</string>
+    <string name="test_reminder">Send a test reminder</string>
+    <string name="test_reminder_desc">Arrives in 10 seconds through the real alarm path.</string>
+    <string name="samsung_title">Samsung battery tips</string>
+    <string name="samsung_tips">On Galaxy phones, also do this once:\n\n1. Settings → Battery → Background usage limits → make sure ToDo is not in “Sleeping apps” or “Deep sleeping apps”.\n2. Turn off “Put unused apps to sleep”.\n3. Open Recents, long-press ToDo → Keep open.\n\nWithout these, Samsung can silence alarms for apps it thinks are unused.</string>
+
+    <string name="empty_title">No reminders yet</string>
+    <string name="empty_body">Tap “New reminder” to schedule your first task. English and فارسی text both work.</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="done">Done</string>
+    <string name="next_label">Next: %1$s · %2$s</string>
+    <string name="all_clear">Nothing upcoming. You are all caught up.</string>
+
+    <string name="mark_done">Mark done</string>
+    <string name="mark_all_done">Mark all as done</string>
+    <string name="undo_all">Undo all</string>
+    <string name="edit">Edit</string>
+    <string name="snooze_10">Snooze 10 min</string>
+    <string name="completed">Completed</string>
+    <string name="exact_banner_title">Exact reminders are off</string>
+    <string name="exact_banner_body">Reminders can arrive late. Tap to enable exact alarms.</string>
+    <string name="enable">Enable</string>
+
+    <string name="test_arriving">Test reminder will arrive in 10 seconds. You can close the app.</string>
+    <string name="test_notification_title">Test reminder</string>
+    <string name="test_notification_body">If you can see this, reminders will reach you.</string>
+    <string name="missed_title">You missed %1$d reminder(s)</string>
+    <string name="missed_body">These passed while the phone was off.</string>
+
+    <string name="date">Date</string>
+    <string name="pick_date">Pick a date (Shamsi)</string>
+    <string name="today">Today</string>
+    <string name="select_year">Select year</string>
+    <string name="shamsi_note">Shamsi calendar · week starts Saturday</string>
+    <string name="previous_month">Previous month</string>
+    <string name="next_month">Next month</string>
+    <string name="times">Times</string>
+    <string name="add_time">Add time</string>
+    <string name="add">Add</string>
+    <string name="schedule_hint">Pick a date, type a time like 09:30 PM, then tap Add.</string>
+    <string name="passed">Passed</string>
+    <string name="delete_occurrence">Remove this date</string>
+    <string name="change_time">Change time</string>
+    <string name="time_hint">Time (hh:mm AM/PM)</string>
+    <string name="time_example">Example: 09:30 PM</string>
+    <string name="time_format_error">Type a valid time, for example 09:30 PM</string>
+    <string name="time_set">Set</string>
+    <string name="sound">Sound</string>
+    <string name="sound_default">Default notification sound</string>
+    <string name="sound_silent">Silent</string>
+    <string name="sound_choose">Choose a sound…</string>
+    <string name="sound_custom">Custom sound</string>
+    <string name="sound_hint">Tap to choose the sound played when this reminder fires.</string>
+    <string name="sound_picker_unavailable">No sound picker is available on this device.</string>
+    <string name="reminder_saved">Reminder saved</string>
+    <string name="no_times">Add at least one time</string>
+
+    <plurals name="date_count">
+        <item quantity="one">%1$d date</item>
+        <item quantity="other">%1$d dates</item>
+    </plurals>
+</resources>
