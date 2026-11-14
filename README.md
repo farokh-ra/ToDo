@@ -116,25 +116,11 @@ ToDo is a reminder app built around a simple idea: **a reminder should be exact,
 
 ## How it works
 
-```mermaid
-flowchart TD
-    A["EditActivity<br/>title, dates, times, sound"] -->|save| B[("ReminderStore<br/>filesDir/reminders.json")]
-    B --> C["AlarmScheduler"]
-    C --> D["AlarmManager"]
-    D --> E["ReminderReceiver"]
-    E --> F["Notifications"]
-    B --> F
-    F --> G{"Reminder sound"}
-    G -->|Default| H["reminders_v1"]
-    G -->|Silent| I["reminders_silent"]
-    G -->|Ringtone| J["reminders_sound_hash"]
-    E --> K["Mark done"]
-    E --> L["Snooze 10 min"]
-    K --> B
-    L --> C
-    R["BootReceiver<br/>boot, update, clock change"] --> C
-    R --> F
-```
+<div align="center">
+
+<img src="docs/assets/architecture.svg" alt="ToDo reminder lifecycle: editor, JSON store, scheduler, AlarmManager, receiver, notifications, channels, and boot re-arming" width="100%">
+
+</div>
 
 1. **You save a task.** The editor writes the title, occurrences, and chosen sound to a single JSON file with a temp-file replace.
 2. **The scheduler arms exact alarms.** Each pending occurrence becomes a `PendingIntent` registered with `AlarmManager` — no service stays alive.
@@ -405,6 +391,7 @@ ToDo/
 │   ├── src/main/res/                  layouts, themes, strings, icons
 │   └── build.gradle.kts
 ├── docs/assets/banner.svg             README hero artwork
+├── docs/assets/architecture.svg       reminder lifecycle diagram
 ├── gradle/wrapper/
 ├── build.gradle.kts
 ├── settings.gradle.kts

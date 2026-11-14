@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="archTitle archDesc">
+  <title id="archTitle">ToDo reminder lifecycle</title>
+  <desc id="archDesc">A left-to-right diagram: EditActivity saves to ReminderStore, which arms AlarmScheduler, which uses AlarmManager to wake ReminderReceiver, which posts Notifications on a channel chosen by sound. BootReceiver re-arms the scheduler, and each notification channel is created per sound.</desc>
+
+  <defs>
+    <linearGradient id="archBg" x1="0" y1="0" x2="1200" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14121F"/>
+      <stop offset="0.55" stop-color="#0F0E16"/>
+      <stop offset="1" stop-color="#0B0A11"/>
+    </linearGradient>
+
+    <linearGradient id="nodeFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1D1A2A"/>
+      <stop offset="1" stop-color="#17151F"/>
+    </linearGradient>
+
+    <linearGradient id="storeFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#211D36"/>
+      <stop offset="1" stop-color="#191624"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A9A5FF"/>
+      <stop offset="1" stop-color="#5AD9CC"/>
+    </linearGradient>
+
+    <linearGradient id="edge" x1="0" y1="0" x2="1200" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4B4666" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#2A2738" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <pattern id="archGrid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+
+    <radialGradient id="archGlowPurple" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6D5DF6" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#6D5DF6" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="archGlowTeal" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2DD4BF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/>
+    </radialGradient>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#625D7A"/>
+    </marker>
+
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#4C8F87"/>
+    </marker>
+
+    <clipPath id="archFrame">
+      <rect x="0" y="0" width="1200" height="460" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#archFrame)">
+    <rect width="1200" height="460" fill="url(#archBg)"/>
+    <rect width="1200" height="460" fill="url(#archGrid)"/>
+    <ellipse cx="180" cy="20" rx="380" ry="240" fill="url(#archGlowPurple)"/>
+    <ellipse cx="1080" cy="450" rx="340" ry="220" fill="url(#archGlowTeal)"/>
+    <circle cx="1090" cy="96" r="130" fill="none" stroke="#A9A5FF" stroke-opacity="0.07" stroke-width="1.2"/>
+  </g>
+  <rect x="0.75" y="0.75" width="1198.5" height="458.5" rx="23.25" fill="none" stroke="url(#edge)" stroke-width="1.5"/>
+
+  <g font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif">
+    <text x="30" y="42" font-size="10.5" font-weight="600" letter-spacing="2.6" fill="#A9A5FF">A REMINDER, END TO END</text>
+    <text x="30" y="66" font-size="13" fill="#807C95">Every step is explicit. Nothing polls in the background.</text>
+
+    <!-- Main pipeline -->
+    <g>
+      <rect x="30" y="92" width="160" height="104" rx="16" fill="url(#nodeFill)" stroke="#353143"/>
+      <circle cx="46" cy="122" r="3.2" fill="#A9A5FF"/>
+      <text x="56" y="127" font-size="14.5" font-weight="600" fill="#F1EFFA">EditActivity</text>
+      <text x="46" y="150" font-size="10.5" fill="#A5A1B8">title · dates · times</text>
+      <text x="46" y="168" font-size="10.5" fill="#A5A1B8">per-reminder sound</text>
+    </g>
+
+    <g>
+      <rect x="218" y="92" width="160" height="104" rx="16" fill="url(#storeFill)" stroke="#4A4170"/>
+      <circle cx="234" cy="122" r="3.2" fill="#A9A5FF"/>
+      <text x="244" y="127" font-size="14.5" font-weight="600" fill="#F1EFFA">ReminderStore</text>
+      <text x="234" y="150" font-size="10.5" fill="#A5A1B8">one JSON document</text>
+      <text x="234" y="168" font-size="9.5" fill="#807C95">filesDir/reminders.json</text>
+    </g>
+
+    <g>
+      <rect x="406" y="92" width="160" height="104" rx="16" fill="url(#nodeFill)" stroke="#2F4A45"/>
+      <circle cx="422" cy="122" r="3.2" fill="#5AD9CC"/>
+      <text x="432" y="127" font-size="14.5" font-weight="600" fill="#F1EFFA">AlarmScheduler</text>
+      <text x="422" y="150" font-size="10.5" fill="#A5A1B8">exact + fallback</text>
+      <text x="422" y="168" font-size="10.5" fill="#A5A1B8">snooze + cancel</text>
+    </g>
+
+    <g>
+      <rect x="594" y="92" width="160" height="104" rx="16" fill="url(#nodeFill)" stroke="#353143"/>
+      <circle cx="610" cy="122" r="3.2" fill="#5AD9CC"/>
+      <text x="620" y="127" font-size="14.5" font-weight="600" fill="#F1EFFA">AlarmManager</text>
+      <text x="610" y="150" font-size="10.5" fill="#A5A1B8">system alarm clock</text>
+      <text x="610" y="168" font-size="10.5" fill="#A5A1B8">RTC wake-up</text>
+    </g>
+
+    <g>
+      <rect x="782" y="92" width="160" height="104" rx="16" fill="url(#nodeFill)" stroke="#353143"/>
+      <circle cx="798" cy="122" r="3.2" fill="#FBBF24"/>
+      <text x="808" y="127" font-size="14.5" font-weight="600" fill="#F1EFFA">ReminderReceiver</text>
+      <text x="798" y="150" font-size="10.5" fill="#A5A1B8">loads the occurrence</text>
+      <text x="798" y="168" font-size="10.5" fill="#A5A1B8">on fire</text>
+    </g>
+
+    <g>
+      <rect x="970" y="92" width="160" height="104" rx="16" fill="url(#nodeFill)" stroke="#3A3550"/>
+      <circle cx="986" cy="122" r="3.2" fill="#A9A5FF"/>
+      <text x="996" y="127" font-size="14.5" font-weight="600" fill="#F1EFFA">Notifications</text>
+      <text x="986" y="150" font-size="10.5" fill="#A5A1B8">heads-up + vibration</text>
+      <text x="986" y="168" font-size="10.5" fill="#A5A1B8">Done / Snooze actions</text>
+    </g>
+
+    <!-- Main arrows -->
+    <g stroke="#625D7A" stroke-width="1.4" marker-end="url(#arrow)">
+      <path d="M190 144h28"/>
+      <path d="M378 144h28"/>
+      <path d="M566 144h28"/>
+      <path d="M754 144h28"/>
+      <path d="M942 144h28"/>
+    </g>
+    <g font-size="9.5" fill="#807C95" text-anchor="middle">
+      <text x="204" y="136">save</text>
+      <text x="392" y="136">arm</text>
+      <text x="580" y="136">set</text>
+      <text x="768" y="136">fire</text>
+      <text x="956" y="136">post</text>
+    </g>
+
+    <!-- Boot re-arm -->
+    <g>
+      <rect x="406" y="270" width="160" height="84" rx="16" fill="url(#nodeFill)" stroke="#2F4A45"/>
+      <circle cx="422" cy="300" r="3.2" fill="#5AD9CC"/>
+      <text x="432" y="305" font-size="14.5" font-weight="600" fill="#F1EFFA">BootReceiver</text>
+      <text x="422" y="328" font-size="10.5" fill="#A5A1B8">boot · update · clock</text>
+      <text x="422" y="344" font-size="10.5" fill="#A5A1B8">re-arm + missed summary</text>
+    </g>
+    <path d="M486 270V200" fill="none" stroke="#4C8F87" stroke-width="1.4" stroke-dasharray="4 4" marker-end="url(#arrowTeal)"/>
+    <text x="498" y="240" font-size="9.5" fill="#5AD9CC">re-arm</text>
+
+    <!-- Channels -->
+    <g>
+      <rect x="970" y="270" width="160" height="104" rx="16" fill="url(#nodeFill)" stroke="#3A3550"/>
+      <circle cx="986" cy="300" r="3.2" fill="#A9A5FF"/>
+      <text x="996" y="305" font-size="14.5" font-weight="600" fill="#F1EFFA">Channels</text>
+      <text x="986" y="328" font-size="10" fill="#A5A1B8">reminders_v1</text>
+      <text x="986" y="346" font-size="10" fill="#A5A1B8">reminders_silent</text>
+      <text x="986" y="364" font-size="9" fill="#807C95">reminders_sound_hash</text>
+    </g>
+    <path d="M1050 196V270" fill="none" stroke="#625D7A" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <text x="1060" y="238" font-size="9.5" fill="#807C95">by sound</text>
+
+    <!-- Footnote -->
+    <path d="M30 392h1130" stroke="#2A2738" stroke-width="1"/>
+    <text x="30" y="418" font-size="12" fill="#A5A1B8">Mark done persists the change and cancels the alarm. Snooze 10 min queues a new alarm.</text>
+    <text x="30" y="440" font-size="11" fill="#6F6B84">No service, no polling loop, and no wakelock between events.</text>
+  </g>
+</svg>
