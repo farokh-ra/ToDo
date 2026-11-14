@@ -33,8 +33,8 @@
 | **Document** | ToDo Proprietary Software License |
 | **Version** | 1.0 |
 | **Effective date** | 14 November 2026 |
-| **Licensor** | farokh-ra |
-| **Copyright** | © 2026 farokh-ra. All rights reserved. |
+| **Licensor** | Farokh RashidAhmadi |
+| **Copyright** | © 2026 Farokh RashidAhmadi. All rights reserved. |
 | **Software** | ToDo — Android task and reminder application |
 | **Scope** | Application builds, Source Code, documentation, designs, and branding |
 | **Status** | Proprietary · All rights reserved · Not open source |
