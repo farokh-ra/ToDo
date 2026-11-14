@@ -1,98 +1,248 @@
-# ToDo — PROPRIETARY SOFTWARE LICENSE AGREEMENT
+# 📜 ToDo — PROPRIETARY SOFTWARE LICENSE
 
-**Copyright © 2026 ToDo. All Rights Reserved.**
+> **Copyright © 2026 ToDo. All Rights Reserved.**
 
-**License Type:** Proprietary / All Rights Reserved  
-**Effective Date:** November 14, 2026
-
-## 1. Ownership and Copyright
-
-ToDo, including its source code, object code, architecture, design, interface, graphics, documentation, features, functionality, and associated materials, is the exclusive intellectual property of its respective copyright holder.
-
-All rights, title, and interest in the software remain exclusively with the copyright holder.
-
-No ownership rights or intellectual property rights are transferred to any user, recipient, or third party through access to or use of the software.
-
-## 2. Limited Permission to Use
-
-Users are granted a limited, personal, non-exclusive, non-transferable, and revocable permission to install and use officially published release versions of ToDo, subject to this agreement.
-
-This permission is strictly limited to ordinary use of the application as intended by its developer.
-
-No other permissions are granted or implied.
-
-## 3. Strictly Prohibited Activities
-
-Without prior explicit written authorization from the copyright holder, no individual, organization, company, or third party may:
-
-- Copy, reproduce, duplicate, or republish any part of the software or its source code.
-- Download, extract, obtain, or reuse source code for development or redistribution purposes.
-- Modify, adapt, translate, alter, or create derivative works based on the software.
-- Redistribute, sublicense, sell, rent, lease, or commercially exploit the software or any of its components.
-- Claim ownership, authorship, or intellectual property rights over any part of ToDo.
-- Incorporate any portion of the software into another application, product, or service.
-- Reverse engineer, decompile, disassemble, or attempt to reconstruct the software, except where such restrictions are prohibited by applicable law.
-- Remove, modify, or obscure copyright notices, ownership statements, or proprietary notices.
-- Publish modified versions, unauthorized forks, or repackaged distributions of the software.
-
-These restrictions apply to the software as a whole and to its individual components.
-
-## 4. Official Distribution
-
-The only authorized distribution of ToDo is through official releases published or explicitly authorized by the copyright holder.
-
-Users may obtain, install, and operate officially distributed release versions for their permitted personal use.
-
-Access to a public repository, website, documentation, or release page does not grant any additional intellectual property rights.
-
-No permission is granted to redistribute, mirror, repackage, or publish unauthorized copies of official releases.
-
-## 5. No Source Code License
-
-The publication, visibility, accessibility, or availability of any source code does not constitute a license, authorization, or permission to use, copy, modify, reproduce, distribute, or incorporate that source code into another project.
-
-All rights not expressly granted under this agreement are reserved by the copyright holder.
-
-**ALL RIGHTS RESERVED.**
-
-## 6. Third-Party Components
-
-Third-party libraries, frameworks, dependencies, and other externally licensed components remain subject to their respective licenses and copyright terms.
-
-Nothing in this agreement overrides or restricts rights independently granted by the applicable third-party licenses.
-
-## 7. Termination of Permission
-
-Any permission granted under this agreement may be terminated upon violation of its applicable terms, subject to mandatory applicable law.
-
-Upon termination, the affected user must cease any use that is no longer authorized.
-
-## 8. No Warranty
-
-The software is provided "AS IS", without warranties of any kind, express or implied, to the maximum extent permitted by applicable law.
-
-The copyright holder makes no guarantee regarding uninterrupted availability, error-free operation, or suitability for a particular purpose.
-
-## 9. Limitation of Liability
-
-To the maximum extent permitted by applicable law, the copyright holder shall not be liable for indirect, incidental, special, consequential, or punitive damages arising from the use or inability to use the software.
-
-Nothing in this agreement excludes liability that cannot legally be excluded.
-
-## 10. Enforcement and Applicable Law
-
-Unauthorized use, reproduction, distribution, or exploitation of protected intellectual property may constitute copyright infringement and may result in legal action or other remedies available under applicable law.
-
-This agreement is subject to applicable copyright and intellectual property laws.
-
-## 11. Acceptance
-
-By installing or using an officially distributed release of ToDo, the user acknowledges this agreement and agrees to comply with its applicable terms.
+| License Information | Details |
+|:---|:---|
+| **Software** | ToDo |
+| **License Type** | Proprietary — All Rights Reserved |
+| **License Version** | 1.0 |
+| **Effective Date** | November 14, 2026 |
+| **Copyright Holder** | ToDo's respective copyright owner |
 
 ---
 
-**ToDo — Proprietary Software**
+## 1. 📌 COPYRIGHT AND OWNERSHIP
 
-**Copyright © 2026 ToDo. All Rights Reserved.**
+ToDo (the "Software") is **proprietary software** protected by applicable copyright, intellectual property, and other relevant laws.
 
-No rights granted except those expressly stated in this agreement.
+All rights, title, and interest in and to the Software are **exclusively reserved** by its respective copyright holder.
+
+This includes, without limitation:
+
+- 💻 Source code and object code.
+- 🏗️ Software architecture and internal implementation.
+- 🧠 Algorithms, logic, and technical structures.
+- 🎨 User interface (UI) and user experience (UX).
+- 🖼️ Visual designs, layouts, graphics, and assets.
+- 📄 Original documentation and written materials.
+- 🏷️ Original names, branding, logos, and identifying elements.
+- 🔄 Modifications, updates, improvements, and original extensions developed by the copyright holder.
+
+> ⚠️ **Nothing in this agreement transfers ownership or grants intellectual property rights to any user, organization, company, or third party.**
+
+---
+
+## 2. ✅ LIMITED LICENSE GRANT
+
+The copyright holder grants users a **limited, personal, non-exclusive, non-transferable, non-sublicensable, and revocable** right to install and use officially published release versions of ToDo.
+
+This permission is **strictly limited** to the following activities:
+
+1. ⬇️ Downloading officially published application releases.
+2. 📲 Installing the official application on compatible devices.
+3. 🛠️ Using the application for its intended functionality.
+4. 🔃 Receiving and installing officially published updates.
+
+> ❗ This permission does **not** grant access rights to the underlying source code or authorize any additional use, reproduction, distribution, or exploitation of the Software.
+
+**All permissions not expressly granted in this agreement are reserved.**
+
+---
+
+## 3. 🔒 SOURCE CODE PROTECTION
+
+The source code of ToDo is **proprietary** and is **not licensed for public reuse**.
+
+> 📢 Public visibility, repository accessibility, or the availability of source files through GitHub or any other platform **does not constitute permission** to use, reproduce, distribute, or exploit the source code.
+
+Without prior explicit written authorization from the copyright holder, **no person or organization is permitted to:**
+
+- ❌ Download, clone, copy, extract, or obtain source code for unauthorized use.
+- ❌ Reproduce any portion of the source code.
+- ❌ Reuse source code, algorithms, or implementation details in another project.
+- ❌ Incorporate source code into another application, product, or service.
+- ❌ Publish, redistribute, mirror, or provide copies of the source code.
+- ❌ Create derivative software based on the source code.
+- ❌ Use the source code for personal, educational, research, or commercial development.
+- ❌ Make the source code available to other individuals or organizations.
+
+> ℹ️ Viewing publicly accessible repository content does not grant any rights beyond those expressly permitted by applicable law and the platform's terms.
+
+---
+
+## 4. 🚫 PROHIBITED ACTIVITIES
+
+Except where expressly authorized in writing by the copyright holder or permitted by mandatory applicable law, the following activities are **strictly prohibited**:
+
+### 4.1 📦 Reproduction and Redistribution
+
+| Prohibited Activity | |
+|:---|:---:|
+| Copying or reproducing the Software or any protected component. | ❌ |
+| Republishing or distributing unauthorized copies. | ❌ |
+| Uploading the Software to unauthorized distribution platforms. | ❌ |
+| Mirroring, repackaging, or creating unofficial distributions. | ❌ |
+| Selling, renting, leasing, sublicensing, or commercially exploiting the Software. | ❌ |
+
+### 4.2 ✏️ Modification and Derivative Works
+
+| Prohibited Activity | |
+|:---|:---:|
+| Modifying, adapting, translating, or altering the Software. | ❌ |
+| Creating modified or unofficial versions. | ❌ |
+| Developing derivative works based on protected components. | ❌ |
+| Removing or replacing proprietary notices, copyright statements, or ownership information. | ❌ |
+
+### 4.3 🔍 Reverse Engineering
+
+| Prohibited Activity | |
+|:---|:---:|
+| Decompiling, disassembling, or attempting to reconstruct the Software. | ❌ |
+| Attempting to obtain protected source code or internal implementation details. | ❌ |
+| Circumventing technical restrictions or protection mechanisms. | ❌ |
+
+> ⚖️ These restrictions apply only to the extent permitted by applicable law, including mandatory exceptions for interoperability, security research, and other legally protected activities.
+
+### 4.4 🎭 Ownership Misrepresentation
+
+| Prohibited Activity | |
+|:---|:---:|
+| Claiming authorship or ownership of the Software or its protected components. | ❌ |
+| Presenting the Software as independently developed by another party. | ❌ |
+| Using the Software's identity, branding, or proprietary assets to mislead users. | ❌ |
+| Registering confusingly similar branding or intellectual property rights in an attempt to misrepresent ownership. | ❌ |
+
+---
+
+## 5. 📡 OFFICIAL DISTRIBUTION
+
+The **only authorized** application distributions are those officially published or explicitly authorized by the copyright holder.
+
+Users are permitted to obtain and use official release builds through **authorized distribution channels**.
+
+**No permission is granted to:**
+
+- ❌ Distribute unofficial copies.
+- ❌ Publish modified application packages.
+- ❌ Repackage the application under another name.
+- ❌ Upload official releases to unauthorized mirrors.
+- ❌ Present unofficial builds as authentic releases.
+- ❌ Distribute the application commercially without written authorization.
+
+> 👑 The copyright holder retains **exclusive control** over official releases, updates, distribution channels, and publication decisions, subject to applicable law.
+
+---
+
+## 6. 🚫 NO OPEN-SOURCE RIGHTS
+
+> **This Software is NOT distributed under the MIT License, Apache License, GNU General Public License (GPL), BSD License, or any other open-source license.**
+
+No rights to copy, modify, redistribute, sublicense, or create derivative works are granted by default.
+
+> ⚠️ The public availability of the GitHub repository **does not imply** that the Software is open source or that its contents are available for unrestricted use.
+
+### 🔴 ALL RIGHTS RESERVED.
+
+---
+
+## 7. 🧩 THIRD-PARTY SOFTWARE AND COMPONENTS
+
+ToDo may incorporate third-party libraries, frameworks, tools, dependencies, or other components.
+
+- Such components remain subject to their **respective copyright holders and applicable licenses**.
+- This agreement does **not** override, restrict, or replace any rights independently granted under third-party licenses.
+- Where applicable, third-party license notices and attribution requirements shall be **maintained separately**.
+
+---
+
+## 8. ⏹️ TERMINATION OF LICENSE
+
+The limited permission granted under this agreement may be **terminated** in the event of a material violation of its terms, subject to applicable law.
+
+Upon termination, the affected user must **discontinue any use** that is no longer authorized and comply with applicable legal requirements.
+
+> ℹ️ Termination does not affect rights or obligations that arose before termination or provisions intended to survive it.
+
+---
+
+## 9. ⚠️ DISCLAIMER OF WARRANTIES
+
+> **To the maximum extent permitted by applicable law, the Software is provided "AS IS" and "AS AVAILABLE", without warranties or guarantees of any kind, whether express, implied, or statutory.**
+
+The copyright holder **does not guarantee** that the Software will:
+
+| Guarantee | Status |
+|:---|:---:|
+| Operate without interruption. | ❌ |
+| Be completely free of errors or defects. | ❌ |
+| Remain compatible with every device or operating system. | ❌ |
+| Meet every individual user's requirements. | ❌ |
+| Remain permanently available or supported. | ❌ |
+
+---
+
+## 10. 🛡️ LIMITATION OF LIABILITY
+
+> **To the maximum extent permitted by applicable law, the copyright holder shall not be liable for indirect, incidental, special, exemplary, or consequential damages arising from the use, inability to use, or distribution of the Software.**
+
+Nothing in this agreement excludes or limits liability where such exclusion or limitation is prohibited by applicable law.
+
+---
+
+## 11. ⚖️ ENFORCEMENT AND LEGAL REMEDIES
+
+Unauthorized reproduction, distribution, modification, exploitation, or other infringement of protected intellectual property may constitute a **violation of applicable copyright and intellectual property laws**.
+
+The copyright holder reserves the right to pursue remedies available under applicable law, including:
+
+- 🗑️ Requests to remove unauthorized distributions.
+- 📝 Copyright infringement complaints.
+- 🏛️ Appropriate legal proceedings.
+- 💰 Claims for damages where legally available.
+- 📜 Other remedies permitted by applicable law.
+
+> ℹ️ Nothing in this section guarantees a particular legal outcome or limits any mandatory legal rights.
+
+---
+
+## 12. 🌍 GOVERNING LAW
+
+This agreement shall be interpreted in accordance with the applicable laws governing the copyright holder and the relevant jurisdiction.
+
+Any disputes shall be handled by the **competent courts or authorities** having jurisdiction, subject to mandatory consumer protection and other applicable legal requirements.
+
+---
+
+## 13. 📝 CHANGES TO THIS AGREEMENT
+
+The copyright holder reserves the right to **revise or update** this agreement when necessary.
+
+- Any updated version will be published through an **official project channel** with its corresponding version and effective date.
+- Updates shall **not retroactively remove** rights already granted under an earlier agreement unless permitted by applicable law.
+
+---
+
+## 14. ✅ ACCEPTANCE AND AUTHORIZED USE
+
+By installing or using an officially distributed release of ToDo, users acknowledge that the Software is **proprietary** and that their permission to use it is limited to the terms of this agreement.
+
+> ℹ️ No additional rights or permissions shall be implied through access to the Software, its repository, or its official distribution channels.
+
+---
+
+## 📋 FINAL COPYRIGHT NOTICE
+
+> ### 🔴 ToDo is proprietary software.
+>
+> ### **Copyright © 2026 ToDo. All Rights Reserved.**
+
+Unauthorized copying, reproduction, modification, redistribution, or exploitation of protected materials is **prohibited** without prior written authorization from the copyright holder.
+
+> ✅ **Official application releases are provided for authorized end-user use only.**
+>
+> ❌ **No other rights are granted or implied.**
+
+---
+
+*END OF LICENSE*
