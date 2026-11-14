@@ -62,8 +62,8 @@ using the best alarm path the system allows.
 2. Open it on the phone and allow installing from this source when prompted.
 3. Launch **ToDo** and grant the notification permission.
 
-The APK is signed with a local key (`app/keystore/local.jks`, password
-`remindly`) so it installs directly. Keep the same key to update the app later.
+The APK is signed with a local key (`app/keystore/local.jks`, not committed) so
+it installs directly. Keep the same key to update the app later.
 
 ## One-time reliability setup (important on Samsung)
 
