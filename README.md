@@ -5,7 +5,7 @@
 <br>
 
 <p>
-  <img alt="Platform: Android 8.0+" src="https://img.shields.io/badge/Android-8.0%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white">
+  <a href="https://github.com/farokh-ra/ToDo/releases/latest"><img alt="Download ToDo 1.2" src="https://img.shields.io/badge/Download-ToDo%201.2-4F46E5?style=for-the-badge&logo=android&logoColor=white"></a>
   <img alt="Kotlin 2.0" src="https://img.shields.io/badge/Kotlin-2.0-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white">
   <img alt="Material 3" src="https://img.shields.io/badge/Material-3-6750A4?style=for-the-badge&logo=materialdesign&logoColor=white">
   <img alt="Version 1.2" src="https://img.shields.io/badge/Version-1.2-2563EB?style=for-the-badge">
@@ -16,7 +16,7 @@
 
 </div>
 
-ToDo is a reminder app built around a simple idea: **a reminder should be exact, quiet, and entirely yours.** It gives every alert to Android's own alarm clock, so no background service runs between reminders. Add a task once, attach one or many dates and times on the **Shamsi (Jalali)** calendar, type times in plain 12-hour format, and choose the sound each reminder should make.
+ToDo is a reminder app built around a simple idea: **a reminder should be exact, quiet, and entirely yours.** It hands every alert to Android's own alarm clock, so no background service runs between reminders. Add a task once, attach one or many dates and times on the **Shamsi (Jalali)** calendar, type times in plain 12-hour format, and choose the sound each reminder should make.
 
 <div align="center">
 
@@ -98,7 +98,7 @@ ToDo is a reminder app built around a simple idea: **a reminder should be exact,
 
 - **Android's own alarm clock.** `AlarmManager` delivers each occurrence; the app wakes only for that moment.
 - **Re-armed automatically** after a reboot, an app update, a clock change, or a granted exact-alarm permission.
-- **Missed reminders summarised.** If reminders pass while the phone is off, one summary notification appears on the next boot.
+- **Missed reminders summarized.** If reminders pass while the phone is off, one summary notification appears on the next boot.
 - **No services, no jobs, no wakelocks.** No app code runs between reminders.
 
 ### What ToDo deliberately does not do
@@ -140,8 +140,8 @@ ToDo is intentionally small: one application process, one in-memory list, and on
 
 | Component | Responsibility |
 |:---|:---|
-| `App` | Initialises storage, notification channels, and alarm state at process start. |
-| `ReminderStore` | Loads and saves the JSON document; exposes a synchronised, observable in-memory list. |
+| `App` | Initializes storage, notification channels, and alarm state at process start. |
+| `ReminderStore` | Loads and saves the JSON document; exposes a synchronized, observable in-memory list. |
 | `AlarmScheduler` | Turns pending occurrences into exact alarms, handles snooze, cancellation, and fallbacks. |
 | `ReminderReceiver` | Handles a fired alarm plus the **Done** and **Snooze** notification actions. |
 | `BootReceiver` | Re-arms alarms after boot, app update, clock change, or an exact-alarm permission change. |
@@ -184,7 +184,7 @@ Everything lives in `filesDir/reminders.json`. Timestamps are **UTC epoch millis
 | `occurrences[].done` | boolean | Completed occurrences are not scheduled and are skipped when a stale alarm arrives. |
 | `occurrences[].notified` | boolean | Idempotency flag: prevents posting the same occurrence twice. Reset when an occurrence is marked undone or its time is changed. |
 
-**Write path.** A full document is serialised to `reminders.json.tmp`, the previous file is removed, and the temp file is renamed into place. If the rename fails, the app falls back to a direct write. Writes are guarded by `@Synchronized`, and the main list subscribes to an in-process listener so it updates immediately after a change.
+**Write path.** A full document is serialized to `reminders.json.tmp`, the previous file is removed, and the temp file is renamed into place. If the rename fails, the app falls back to a direct write. Writes are guarded by `@Synchronized`, and the main list subscribes to an in-process listener so it updates immediately after a change.
 
 **Load path.** Malformed JSON is logged and the store starts empty rather than crashing. Unknown fields are ignored, occurrences without a positive timestamp are skipped, and missing IDs are replaced with fresh UUIDs on load.
 
@@ -227,7 +227,7 @@ There is no clock dial. Times are typed as **`hh:mm AM/PM`**, which is faster on
 | `00:00 AM` | 00:00 | Midnight in 00-hour notation. |
 | `25:00 PM` | — | Rejected with an inline format hint. |
 
-Validation runs before the dialog closes: the hour must be **0–12**, the minute **0–59**, and an **AM/PM** suffix is required. One or two digits are accepted for the hour and minute. The same input dialog is used when adding and changing times, and the chips display the normalised zero-padded value (`09:30 PM`).
+Validation runs before the dialog closes: the hour must be **0–12**, the minute **0–59**, and an **AM/PM** suffix is required. One or two digits are accepted for the hour and minute. The same input dialog is used when adding and changing times, and the chips display the normalized zero-padded value (`09:30 PM`).
 
 ---
 
@@ -243,7 +243,7 @@ Android 8.0 and later fix a channel's sound when the channel is created. To let 
 
 The picker is the platform's own **ringtone picker** (`RingtoneManager`), so any notification sound available to Android can be selected. Picking the system default maps back to **Default**; picking **None** maps to **Silent**. Channels are created on demand and are also recreated at startup for existing reminders, so saved choices keep working across reboots and updates.
 
-Each channel is high-importance, vibrates, shows a badge, and is named after the sound (`ToDo · Antimony`) so it is recognisable in Android's notification settings. If a channel already exists, ToDo leaves it alone — **the user's own channel changes are never overwritten**. If a custom channel cannot be created, the alert falls back to the default channel rather than being lost.
+Each channel is high-importance, vibrates, shows a badge, and is named after the sound (`ToDo · Antimony`) so it is recognizable in Android's notification settings. If a channel already exists, ToDo leaves it alone — **the user's own channel changes are never overwritten**. If a custom channel cannot be created, the alert falls back to the default channel rather than being lost.
 
 ---
 
@@ -274,7 +274,7 @@ Reminders are stored as **epoch timestamps**, so the calendar affects labels onl
 - **Graceful fallback.** If exact alarms are turned off, the app shows a banner and still tries the system alarm-clock path, then an inexact alarm.
 - **Reboot-safe.** `BootReceiver` re-arms pending alarms after a reboot, app update, or clock change.
 - **Missed summary.** Alerts that would have fired while the phone was powered off are collected into one “You missed …” notification on the next boot.
-- **Self-check.** The Reliability screen shows notification, exact-alarm, and battery-optimisation status, and can send a test reminder in 10 seconds.
+- **Self-check.** The Reliability screen shows notification, exact-alarm, and battery-optimization status, and can send a test reminder in 10 seconds.
 
 ### When things go wrong
 
@@ -304,7 +304,15 @@ These steps matter on Galaxy phones, which can otherwise silence alarms for apps
 
 ## Install
 
-ToDo is distributed as source; the repository does not commit APK binaries. Build a debug APK and install it in one pass:
+### Download the signed APK
+
+**[Download ToDo 1.2](https://github.com/farokh-ra/ToDo/releases/latest)** — a release-signed, zip-aligned, universal APK for Android 8.0+ (about 1.4 MB).
+
+Open the APK on the phone and allow installs from this source when prompted. If a debug build is already installed, uninstall it first: Android will not install a release-signed APK over one signed with the debug key. Play Protect may also ask you to confirm a sideloaded install — that is the platform's unknown-app prompt, not an APK signing error.
+
+The release is signed with the project's local release key, uses APK Signature Scheme v2, targets Android 14, and contains no native libraries, so the same APK installs on every supported ABI.
+
+### Build and install from source
 
 ```bash
 git clone https://github.com/farokh-ra/ToDo.git
@@ -468,6 +476,9 @@ ToDo stores everything on the device:
 - Removed the **Repeat** option and all repeat logic. A reminder now contains only the explicit occurrences you add.
 - Bumped to **version 1.2** (`versionCode 3`).
 - Rebuilt the README with the project banner, engineering notes, and release documentation.
+- Published a release-signed, zip-aligned **`ToDo-v1.2.apk`** for direct installation on Android 8.0+.
+
+**Artifact:** `ToDo-v1.2.apk` · 1,495,005 bytes · SHA-256 `80E94E5D6272A7E3CB11FA225A2C4C79BB79CA1ECFCC3547729BDA1E144E11CD`
 
 ### 1.1 — feature baseline
 
@@ -508,7 +519,7 @@ ToDo is **proprietary software**, not an open-source project. Issues with clear 
 
 1. App version and `versionCode` (from **Settings → Apps → ToDo** or the APK filename).
 2. Android version, device model, and whether the app is sideloaded.
-3. Exact steps, expected behaviour, and actual behaviour.
+3. Exact steps, expected behavior, and actual behavior.
 4. Whether notifications, exact alarms, and unrestricted battery are enabled in **Reliability**.
 5. Relevant logcat lines, with personal task text removed.
 
@@ -592,7 +603,7 @@ Read the full **[Proprietary Software License](LICENSE.md)** for definitions, pe
 
 <div align="center">
 
-<sub>© 2026 Farokh RashidAhmadi · All rights reserved</sub>
+<sub>© 2026 farokh-ra · All rights reserved</sub>
 
 <sub>Built with Kotlin, Material 3, and Android's alarm clock.</sub>
 
